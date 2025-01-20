@@ -1,0 +1,127 @@
+<main class="main" role="main" [style.backgroundColor]="backgroundColor" >
+  <app-main-section  (elementClick)="changeBackgroundColor()"
+  [pageId]="'home'"
+    [id]="'page-1'"
+    [theme]="'theme-default'"
+    [title]="'One Click. <br>Full Send.'"
+    [description]="
+      'Eco enables apps to unlock stablecoin liquidity from any connected chain and give users the simplest onchain experience.'
+    "
+    [buttons]="[
+      {
+        text: '',
+        label: '',
+        class: 'main__page-1-button'
+      }
+    ]"
+    [titleSize]="'big'"
+    [descriptionSize]="'big'"
+  >
+  </app-main-section>
+
+  <app-main-section
+  [pageId]="'about'"
+    [id]="'page-2'"
+    [theme]="'theme-blue'"
+    [title]="'A protocol for <br>stablecoins'"
+    [subTitle]="'And for the apps that use them.'"
+    [subTitleSize]="'medium-small'"
+    [description]="
+      'Eco is designed to be the default protocol for apps that use stablecoins or need stablecoin liquidity. Eco provides a frictionless stablecoin experience that accelerates user onboarding and streamlines money movement onchain.'
+    "
+    [buttons]="[
+      {
+        text: 'Learn More',
+        label: 'Scroll to next section',
+        class: 'main__button-fill'
+      },
+      {
+        text: 'Read Docs',
+        label: 'Scroll to next section',
+        class: 'main__button-empty'
+      }
+    ]"
+    [titleSize]="'medium'"
+    [descriptionSize]="'big'"
+  >
+  </app-main-section>
+
+  <app-main-section
+  [pageId]="'why'"
+    [id]="'page-3'"
+    [theme]="'theme-dark'"
+    [title]="' Attract liquidity,<br> simplify UX,<br> supercharge revenue'"
+    [titleSize]="'medium'"
+    [descriptionSize]="'big'"
+    [description]="
+      'Integrate Eco to instantly aggregate liquidity in any supported stablecoin from any connected rollup settling to Ethereum.'
+    "
+    [subDescription]="
+      'Integrate Eco to enable easy onboarding, intuitive balance aggregation and one click send to anywhere, whatever your use case. With Eco, you can focus on what matters: building something people want.'
+    "
+    [buttons]=""
+  >
+  </app-main-section>
+
+  <app-main-section 
+  [pageId]="'design'"
+    [id]="'page-4'"
+    [theme]="'theme-teal'"
+    [title]="' A full stack upgrade for transacting onchain'"
+    [titleSize]="'medium'"
+    [description]="
+'The Eco Protocol is an Ethereum-based rollup and permissionless liquidity network designed from the ground up for the most capital efficient stablecoin transaction execution with the simplest possible user experience.'    "
+    [buttons]="[
+      {
+        text: 'More Details',
+        label: 'Scroll to next section',
+        class: 'main__button-fill'
+      }
+    ]"
+  >
+  </app-main-section>
+
+  <app-main-section
+  [pageId]="'stayupdated'"
+    [id]="'page-5'"
+    [theme]="'theme-default'"
+    [title]="'Stay Updated'"
+    [description]="
+      'If youre building onchain or want to bring your users there, watch for early access opening soon.'
+    "
+    [buttons]="[
+      {
+        text: 'Get Updates',
+        label: 'Scroll to next section',
+        class: 'main__button-fill'
+      }
+    ]"
+    [titleSize]="'medium'"
+    [descriptionSize]="'medium'"
+  >
+  </app-main-section>
+
+  <section class="main__logo-right theme-default">
+    <i aria-hidden="true">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        viewBox="0 0 454 454"
+        class="md:size-[50vw] size-[80vw] translate-x-[50%] -translate-y-[20%] *:duration-150 *:fill-[#5514192C]"
+      >
+        <path
+          fill="#1D53BD"
+          d="M356.275 41.6C319.538 15.912 274.828.842 226.6.842 101.475.842.042 102.276.042 227.4c0 20.086 2.613 39.561 7.52 58.104a215.5 215.5 0 0 0 52.49-2.25c-5.882-17.546-9.069-36.327-9.069-55.854 0-96.99 78.626-175.616 175.617-175.616 28.475 0 55.367 6.777 79.152 18.807-5.863 128.44-101.193 233.551-225.13 254.472-6.679 1.459-14.03 1.76-20.843 2.691a275.534 275.534 0 0 1-36.755.83c8.216 15.783 18.235 30.591 29.734 44.109 41.559 49.673 104.011 81.266 173.842 81.266 125.124 0 226.558-101.434 226.558-226.559 0-12.42-1-24.607-2.923-36.484a258.1 258.1 0 0 1-48.239 45.347c-4.616 92.872-81.378 166.754-175.396 166.754-39.42 0-75.807-12.988-105.114-34.918 120.855-33.554 213.1-135.868 231.952-262.162l.035.037a221.6 221.6 0 0 0 2.802-64.374"
+        ></path>
+      </svg>
+    </i>
+  </section>
+
+  <div class="main-nav theme-default" role="menubar">
+    <app-menu
+      [items]="subMenuItems[1]"
+      [isMainMenu]="'left-nav'"
+      [menuClass]="addMenuClass[2]"
+    ></app-menu>
+  </div>
+</main>

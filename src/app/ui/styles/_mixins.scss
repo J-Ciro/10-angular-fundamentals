@@ -1,0 +1,21 @@
+@mixin position($top: 0, $right: 0, $left: 0, $bottom: 0) {
+    position: fixed;
+    top: $top;
+    right: $right;
+    left: $left;
+    bottom: $bottom;
+  }
+
+@mixin display($items: unset, $content: unset, $direction:  unset, $jcontent: unset){
+    display: flex;
+    align-items: $items;
+    align-content: $content;
+    flex-direction: $direction;
+    justify-content: $jcontent;
+   
+}
+
+@mixin size($width: unset, $height: unset){
+    width: $width;
+    height: $height;
+}

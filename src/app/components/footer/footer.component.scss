@@ -1,0 +1,36 @@
+@use "../../ui/styles/mixins" as mixins; 
+@use "../../ui/styles/theme";
+@use "../../ui/styles/variables";
+
+.footer {
+    @include mixins.position(unset,0,0,0);
+  
+    @include mixins.display(unset, unset, unset, space-between);
+  
+    padding: 0px 30px 35px 30px;
+    background: transparent;
+    margin: 21px;
+    &__section {
+      @include mixins.display(center, unset, unset, unset);
+    }
+  
+    &__section-nav {
+      @include mixins.display(center, unset, unset, unset);
+      list-style: none;
+      gap: 1.5rem;
+  
+      a {
+        text-decoration: none;
+        transition: color 0.3s ease, opacity 0.3s ease;
+  
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+  
+      svg path {
+        transition: fill 0.3s ease;
+      }
+    }
+  }
+  

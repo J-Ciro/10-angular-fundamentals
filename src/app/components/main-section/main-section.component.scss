@@ -1,0 +1,149 @@
+@use "../../ui/styles/mixins" as mixins;
+@use "../../ui/styles/variables" as variables;
+@use "../../ui/styles/theme";
+
+
+.main {
+
+    &__page-1,
+    &__page-2,
+    &__page-3,
+    &__page-4,
+    &__page-5 {
+      @include mixins.display(center, center, unset);
+      @include mixins.size(unset, 98vh);
+      scroll-snap-align: center;
+      scroll-snap-stop: always;
+      margin: 10px;
+      padding: 10px;
+      border-radius: 1.3rem;
+  
+      > div {
+        max-width: 1200px;
+        width: 40%;
+        margin: 0 auto;
+      }
+      &--title-big {
+        @include mixins.display(unset, unset, column);
+        font-size: 6rem;
+        line-height: 1;
+        font-weight: 560;
+      }
+      &--title-medium {
+        @include mixins.display(unset, unset, column);
+        font-size: 60px;
+        line-height: 1;
+        font-weight: 560;
+        text-align: left;
+      }
+  
+      &--conteiner {
+        @include mixins.display(flex-start, center, column);
+        gap: 25px;
+        width: 100%;
+      }
+      &--content {
+        @include mixins.display(unset, unset, unset, unset);
+      }
+      &--description-big {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        text-align: left;
+      }
+  
+      &-buttons {
+        button.main__button-fill,
+        button.main__button-empty {
+          @include mixins.size(161px, 50px);
+          border-radius: 9999px;
+          font-family: variables.$roboto-mono;
+          font-weight: 600;
+          border: 0px;
+          font-size: 16px;
+          cursor: pointer;
+          transition: 0.15s;
+          
+        }
+  
+        button.main__button-fill{
+          &:hover{
+            transform: translateY(-1.5px);
+            opacity: .8;
+            transition: 0.15s;
+          }
+        }
+        button.main__button-empty {
+          background-color: transparent;
+          color: variables.$text-white;
+          border: 1px solid #fff;
+        }
+      }
+    }
+  
+    &__page-1 {
+      background-color: variables.$bg-default;
+  
+      &-button {
+        @include mixins.size(64px, 64px);
+        border-radius: 100%;
+        background-color: rgba(28, 83, 189, 1);
+        border-color: transparent;
+        color: variables.$text-white;
+        position: relative;
+        overflow: hidden;
+        border-radius: 50%;
+        cursor: pointer;
+        svg{
+  
+          @include mixins.size(25px, 100%);
+          &:hover{
+            animation: fadeUp 1s;
+           
+          }
+          
+        }
+        &:hover{
+          opacity: 0.8;
+        }
+      }
+    }
+  
+    &__page-2 {
+      background-color: variables.$bg-blue;
+      &--title-medium-small {
+        font-size: 20px;
+      }
+    }
+  
+    &__page-3 {
+      background-color: variables.$bg-dark-blue;
+    }
+  
+    &__page-4 {
+      background-color: variables.$bg-teal;
+    }
+  
+    &__page-5 {
+      background-color: variables.$bg-default;
+      &--container {
+        @include mixins.display(unset, unset, column);
+        gap: 30px;
+      }
+    }
+  }
+  
+
+  @keyframes fadeUp {
+    0% {
+      transform: translateY(0); /* Posición inicial */
+    }
+    50% {
+      transform: translateY(50px); /* Bajar */
+    }
+    51% {
+      transform: translateY(-100%); /* Aparecer desde arriba */
+    }
+    100% {
+      transform: translateY(0); /* Volver a la posición inicial */
+    }
+  }

@@ -1,0 +1,34 @@
+<section class="main__{{id()}} {{theme()}}" id="{{pageId()}}" (click)="onClickElement()">
+    <div class="main__{{id()}}--content" >
+      <div class="main__{{id()}}--conteiner ">
+        <h1 class="main__{{id()}}--title-{{titleSize()}}">
+          <span [innerHTML]="title()" ></span>
+        </h1>
+        <span class="main__{{id()}}--title-{{subTitleSize()}}" [innerHTML]="subTitle()" [hidden]="!subTitle()"></span>
+        <p class="main__{{id()}}--description-{{descriptionSize()}}">{{description()}}</p>
+        <p class="main__{{id()}}--description-{{descriptionSize()}}" [hidden]="!subDescription()">
+   {{subDescription()}}
+   </p>
+      
+        @if(buttons()?.length){
+          <div class="main__{{id()}}-buttons">
+              @for(button of buttons(); track $index){
+                  <button [class]="button.class" [attr.aria-label]="button.label">
+
+                    @if(button.text != '' ){
+                      {{button.text}}
+
+                    }@else{
+                      <a href="#about" style="color: #fff;">
+                        <i aria-hidden="true" [style]="{display: 'block', width: '100%', height: '100%'   }"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down text-white"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></i>
+                      </a>
+                    }
+                    
+                  </button>
+              }
+          </div>
+      }
+      </div>
+    </div>
+  </section>
+  

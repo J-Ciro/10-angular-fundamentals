@@ -1,0 +1,23 @@
+@use "../../ui/styles/mixins" as mixins; 
+@use "../../ui/styles/theme";
+
+.header {
+
+    @include mixins.position(0,0,0,unset);
+    @include mixins.display(center, unset, unset);
+    z-index: 1000;
+    padding: 25px 35px;
+    background: transparent;
+  
+    span {
+      transition: color 0.3s ease;
+    }
+  
+    svg path {
+      transition: fill 0.3s ease;
+    }
+  }
+  
+ 
+
+  
