@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { MenuComponent } from '../menu/menu.component';
 import { MainSectionComponent } from '../main-section/main-section.component';
+import { MainRightNavbarComponent } from "../main-right-navbar/main-right-navbar.component";
 
 @Component({
   selector: 'app-main',
-  imports: [MenuComponent, MainSectionComponent],
+  imports: [MainSectionComponent, MainRightNavbarComponent],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'
 })

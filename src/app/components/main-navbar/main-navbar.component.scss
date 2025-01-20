@@ -1,0 +1,23 @@
+@use "../../ui/styles/mixins" as mixins;
+@use "../../ui/styles/variables" as variables;
+@use "../../ui/styles/theme";
+
+.menu {
+  @include mixins.display(center, unset, unset);
+  list-style: none;
+  gap: 40px;
+
+  &__item {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__item-icon {
+    @include mixins.display(unset, unset, unset, unset);
+    @include mixins.size(100px, 32px);
+  }
+}

@@ -1,0 +1,12 @@
+<menu [className]="menuClass()" role="menubar">
+
+    @for (svg of svgs(); track $index) {
+        <li role="menuitem">
+            <a href="">
+                <i aria-hidden="true" [innerHTML]="sanitizedSvgs[$index]"> 
+                </i>
+            </a>
+        </li>
+    }
+    
+</menu>

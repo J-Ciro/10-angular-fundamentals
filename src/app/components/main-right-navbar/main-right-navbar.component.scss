@@ -1,0 +1,66 @@
+@use "../../ui/styles/mixins" as mixins;
+@use "../../ui/styles/variables" as variables;
+@use "../../ui/styles/theme";
+
+.main-nav {
+  &__container {
+    @include mixins.display(start, unset, column, center);
+    @include mixins.size(unset, 100%);
+    gap: 10px;
+    animation-fill-mode: forwards;
+
+    a {
+      opacity: 0;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    &:hover {
+      a {
+        visibility: visible;
+        animation: fadeMenu 0.8s normal;
+        opacity: 1;
+      }
+    }
+
+    &:not(:hover) {
+      a {
+        visibility: visible !important;
+        animation: fadeOut 0.8s forwards;
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &__item {
+    @include mixins.display(center, center, row, flex-end);
+    list-style: none;
+    gap: 20px;
+    width: 100%;
+    list-style: none;
+
+    span {
+      @include mixins.size(4px, 25px);
+      opacity: 40%;
+      mix-blend-mode: color;
+      border-radius: 100px;
+    }
+
+    a {
+      font-family: variables.$roboto-mono;
+      font-size: 14px;
+      text-decoration: none;
+      visibility: hidden;
+    }
+
+    &--active {
+      a {
+        visibility: visible !important;
+        opacity: 1 !important;
+      }
+      span {
+        mix-blend-mode: normal;
+        opacity: 100% !important;
+      }
+    }
+  }
+}

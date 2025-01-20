@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SubMenuComponent } from './sub-menu.component';
+import { MainRightNavbarComponent } from './main-right-navbar.component';
 
-describe('SubMenuComponent', () => {
-  let component: SubMenuComponent;
-  let fixture: ComponentFixture<SubMenuComponent>;
+describe('MainRightNavbarComponent', () => {
+  let component: MainRightNavbarComponent;
+  let fixture: ComponentFixture<MainRightNavbarComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SubMenuComponent]
+      imports: [MainRightNavbarComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SubMenuComponent);
+    fixture = TestBed.createComponent(MainRightNavbarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

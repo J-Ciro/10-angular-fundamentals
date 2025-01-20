@@ -1,0 +1,10 @@
+<menu [className]="menuClass()" role="menubar">
+    @for (item of items(); track $index){
+        <li class="main-nav__item">
+        <a [href]="'#'+formatHref(item)">
+            {{item}}
+        </a>    
+        <span>&nbsp;</span>
+        </li>
+    }
+</menu>

@@ -1,0 +1,8 @@
+<menu [className]="menuClass()" role="menubar">
+
+    @for (item of items(); track $index){
+        <li class="footer__item">
+            <span>{{item}}</span>
+        </li>
+    }
+</menu> 
