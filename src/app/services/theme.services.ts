@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class ThemeService {
   private elementsToUpdate = [
     '.header',
-    '.main-nav',
+    '.main__nav',
     '.footer',
     '.main__logo-right',
   ];

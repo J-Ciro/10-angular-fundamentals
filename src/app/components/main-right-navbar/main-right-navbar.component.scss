@@ -3,6 +3,7 @@
 @use "../../ui/styles/theme";
 
 .main-nav {
+
   &__container {
     @include mixins.display(start, unset, column, center);
     @include mixins.size(unset, 100%);
