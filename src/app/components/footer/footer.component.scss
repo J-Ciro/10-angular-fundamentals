@@ -1,15 +1,11 @@
-@use "../../ui/styles/mixins" as mixins; 
+@use "../../ui/styles/mixins" as mixins;
 @use "../../ui/styles/theme";
 @use "../../ui/styles/variables";
 
 .footer {
-    @include mixins.position(unset,0,0,0);
-  
-    @include mixins.display(unset, unset, unset, space-between);
-  
-    padding: 0px 30px 35px 30px;
-    background: transparent;
-    margin: 21px;
-   
-  }
-  
+  @include mixins.position(unset, 0, 0, 0);
+  @include mixins.display(unset, unset, unset, space-between);
+  padding: 0px 30px 35px 30px;
+  background: transparent;
+  margin: 21px;
+}
